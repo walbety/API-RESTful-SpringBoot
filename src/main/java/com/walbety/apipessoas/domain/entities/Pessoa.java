@@ -7,8 +7,9 @@ import java.util.Map;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import org.springframework.data.annotation.Id;
+
 
 @Entity
 public class Pessoa implements Serializable {
@@ -39,12 +40,15 @@ public class Pessoa implements Serializable {
 	private Integer peso;
 	private String tipoSanguineo;
 	private String cor;
-	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 	public Pessoa(String nome, Integer idade) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
+	}
+	
+	public Pessoa() {
+		
 	}
 
 	public Integer getId() {
@@ -229,14 +233,6 @@ public class Pessoa implements Serializable {
 
 	public void setCor(String cor) {
 		this.cor = cor;
-	}
-
-	public Map<String, Object> getAdditionalProperties() {
-		return additionalProperties;
-	}
-
-	public void setAdditionalProperties(Map<String, Object> additionalProperties) {
-		this.additionalProperties = additionalProperties;
 	}
 
 }

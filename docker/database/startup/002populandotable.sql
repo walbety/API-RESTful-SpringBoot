@@ -1,6 +1,6 @@
 
 USE db_pessoas;
-INSERT INTO pessoas (nome,
+INSERT INTO pessoa (nome,
 idade,
 cpf,
 rg,

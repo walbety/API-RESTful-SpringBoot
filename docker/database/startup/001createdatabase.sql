@@ -1,7 +1,7 @@
 
 
 USE db_pessoas;
-CREATE TABLE pessoas (
+CREATE TABLE pessoa (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(80) NULL,
     idade INT NULL,

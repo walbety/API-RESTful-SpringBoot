@@ -1,15 +1,11 @@
 package com.walbety.apipessoas.domain.entities;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-
 
 @Entity
 public class Pessoa implements Serializable {
@@ -46,9 +42,9 @@ public class Pessoa implements Serializable {
 		this.nome = nome;
 		this.idade = idade;
 	}
-	
+
 	public Pessoa() {
-		
+
 	}
 
 	public Integer getId() {

@@ -1,10 +1,22 @@
-package com.walbety.apipessoas.entities;
+package com.walbety.apipessoas.domain.entities;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Pessoa {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
+import org.springframework.data.annotation.Id;
+
+@Entity
+public class Pessoa implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String nome;
 	private Integer idade;
 	private String cpf;
@@ -33,6 +45,14 @@ public class Pessoa {
 		super();
 		this.nome = nome;
 		this.idade = idade;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNome() {
